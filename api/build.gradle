@@ -1,0 +1,32 @@
+plugins {
+    id 'project-conventions'
+}
+
+dependencies {
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+springBoot {
+    mainClass = 'com.reliaquest.api.ApiApplication'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mockito:mockito-core:5.11.0'
+
+    implementation 'jakarta.platform:jakarta.jakartaee-api:10.0.0'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+}
+
+test {
+    useJUnitPlatform()
+}
